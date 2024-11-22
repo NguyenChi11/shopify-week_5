@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#header {
+  overflow: hidden;
+}
+
+.list__questions__items {
+  margin: 40px;
+  font-family: "Poppins";
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.questions__items {
+  background-color: rgb(171, 168, 168);
+  transition: 0.5s;
+  margin-bottom: 10px;
+}
+
+.questions__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.questions__title h2 {
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+.questions__answer h3 {
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+.questions__title:hover {
+  color: #faf3f3;
+  background-color: #4172f1;
+  cursor: pointer;
+}
+
+.questions__answer {
+  display: none;
+  background-color: rgb(193, 212, 251);
+  padding: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.style {
+  background: #4172f1;
+  color: #faf3f3;
+}
+
+.block {
+  display: block;
+}
+
+.icon i {
+  font-size: 32px;
+}
+
+#header h1 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 60px;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .title {
+    padding: 38px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .title {
+    padding: 34px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .icon i {
+    font-size: 28px;
+  }
+  .questions__title,
+  .questions__answer {
+    padding: 16px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .title {
+    padding: 30px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 10px;
+  }
+  .icon i {
+    font-size: 24px;
+  }
+  .questions__title,
+  .questions__answer {
+    padding: 14px;
+  }
+}
+@media (max-width: 575.98px) {
+  .title {
+    padding: 24px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 12px;
+  }
+  h3 {
+    font-size: 10px;
+  }
+  p {
+    font-size: 10px;
+  }
+  .icon i {
+    font-size: 20px;
+  }
+  .questions__title,
+  .questions__answer {
+    padding: 14px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

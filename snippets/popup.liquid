@@ -1,0 +1,30 @@
+
+    <link rel="stylesheet" href="{{ 'popup.css' | asset_url }}" media="print" onload="this.media='all'">
+    <script src="{{ 'popup.js' | asset_url }}" defer="defer"> </script>
+    <div class="popup-overlay" id="popup">
+      <div class="popup-wrapper">
+        <div class="popup-image">
+          <img src="{{ 'image_1.jpg' | asset_url }}" />
+        </div>
+        <div class="popup-content">
+          <h2>Stay updated</h2>
+          <p class="popup-title">
+            Enter your email below to join our awesome mailing list
+          </p>
+          <div class="popup-form">
+            <form id="popupForm">
+              <input
+                type="email"
+                id="emailInput"
+                placeholder="Your email"
+                required
+              />
+              <div>
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+            <p class="title-last">No thanks</p>
+          </div>
+        </div>
+      </div>
+    </div>
