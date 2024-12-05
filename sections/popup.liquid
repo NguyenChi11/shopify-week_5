@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="{{ 'popup.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'popup.js' | asset_url }}" defer="defer"> </script>
+
+
+<div class="popup-overlay" id="popup">
+    <div class="popup-wrapper">
+      <div class="popup-image">
+        {% comment %} <img src="{{ 'image_1.jpg' | asset_url }}"  width="100px" height="100px"/> {% endcomment %}
+        
+        {{ section.settings.image | image_url: width : 500 |image_tag }}
+      </div>
+      <div class="popup-content">
+        <h2>{{ section.settings.popup }}</h2>
+        <p class="popup-title">
+          {{ section.settings.popup_text }}
+        </p>
+        <div class="popup-form">
+          <form id="popupForm">
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Your email"
+              required
+            />
+            <div>
+              <button type="submit">{{ section.settings.button_text }}</button>
+            </div>
+          </form>
+          <p class="title-last">{{ section.settings.text_end }}</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Popup Group",
+        "tag": "header",
+        "class": "popup",
+        "settings": [
+            {
+                "type": "text",
+                "label": "Title",
+                "id": "popup",
+                "default": "Stay updated"
+            },
+            {
+                "type":"image_picker",
+                "id": "image",
+                "label": "Image",
+            },
+            {
+                "id": "popup_text",
+                "type": "textarea",
+                "label": "Nội dung Popup",
+                "default": " Sign up to receive news to receive the latest promotional information!"
+            },
+            {
+                "id": "button_text",
+                "type": "text",
+                "label": "Button Popup",
+                "default": "submit"
+            },
+            {
+                "type": "text",
+                "label": "text-end",
+                "id": "text_end",
+                "default": "No thank"
+            },
+        ],
+        "presets":[
+        {
+            "name": "Popup",
+        
+        }
+    ],
+    }
+{% endschema %}

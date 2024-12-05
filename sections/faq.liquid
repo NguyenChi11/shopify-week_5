@@ -1,0 +1,85 @@
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="{{ 'faq.css' | asset_url }}" media="print" onload="this.media='all'">
+  <script src="{{ 'faq.js' | asset_url }}" defer="defer"> </script>
+<div id="header">
+    <div class="header">
+        <h1>{{ section.settings.title }}</h1>
+    </div>
+    <div class="list__questions__items">
+      {% for block in section.blocks %}
+        {% if block.type=="question-list" %}           
+      <div class="questions__items">
+            <div class="questions__title">
+              <h2>{{block.settings.question }}</h2>
+                <div class="icon">
+                  <div class="icon-act">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                </div>
+            </div>
+            <div class="questions__answer">
+              <h3> {{block.settings.answer-title }}</h3>
+              <div>{{ block.settings.answer_chi }}</div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+    {
+    "name": "Faq Group",
+    "tag": "section",
+    "class": "faq",
+    "settings": 
+        [
+         {
+            "type":"text",
+            "label": "Title",
+            "id": "title", 
+             "default": "FAQs ON Design & Development"
+        },
+        ],
+    "blocks": [
+        {
+          "type":"question-list",
+          "name":"Question-list",
+          
+          "settings": [
+            {
+              "type": "text",
+              "id": "question",
+              "label": "question",
+              "default": "question"
+            },
+            {
+              "type": "text",
+              "id": "answer-title",
+              "label": "answer-title",
+              "default": "answer-title"
+            },
+            {
+              "type": "richtext",
+              "id": "answer_chi",
+              "label": "answer",
+            },
+          ],  
+        },
+    ],
+    "presets":[
+        {
+            "name": "Faq Group",
+            "blocks": [
+              {
+                "type": "question-list"
+              }
+            ]
+        }
+    ],
+    }
+
+{% endschema %}
