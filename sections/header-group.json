@@ -11,6 +11,16 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "popup_EkyHtg": {
+      "type": "popup",
+      "settings": {
+        "popup": "Stay updatedaa",
+        "image": "shopify://shop_images/467554930_18087951010515474_4727179450106075648_n.jpg",
+        "popup_text": "Sign up to receive news to receive the latest promotional information!",
+        "button_text": "submit",
+        "text_end": "No thank"
+      }
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -56,6 +66,7 @@
     }
   },
   "order": [
+    "popup_EkyHtg",
     "announcement-bar",
     "header"
   ]
